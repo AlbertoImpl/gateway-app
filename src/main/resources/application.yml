@@ -1,0 +1,11 @@
+server:
+  port: 8082
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: foo_github
+          uri: https://github.com
+          predicates:
+            - Path=/foo
